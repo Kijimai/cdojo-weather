@@ -4,4 +4,5 @@
 // - Make an "active" class to slowly animate it into being, then remove it on a setTimeout by taking the class off.
 // Convert the temperatures when the <select> element is changed
 
+console.log("Script connected!")
 

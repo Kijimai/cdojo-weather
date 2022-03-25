@@ -1,0 +1,113 @@
+:root {
+  --color-white: 0 0% 100%;
+  --color-dark: 0 0% 20%;
+
+  --color-grey: 0 0% 35%;
+
+  --color-primary-lightblue: 214 86% 80%;
+
+  --default-font-size: 62.5%; /* 10px */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--default-font-size);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+/* Reusables */
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: 0.3rem solid hsl(var(--color-dark));
+  box-shadow: 0.2rem 0.2rem hsl(var(--color-dark));
+  transition: 0.2s ease box-shadow, 0.2s ease transform;
+}
+
+.btn:hover {
+  box-shadow: 0.1rem 0.4rem hsl(var(--color-dark));
+  transform: translateY(-0.1rem);
+}
+
+.btn.light-blue {
+  background-color: hsl(var(--color-primary-lightblue));
+}
+
+.btn.light-blue:hover {
+  background-color: hsl(var(--color-primary-lightblue) / 0.7);
+}
+
+/* Navigator */
+
+.navigator {
+  background-color: hsl(var(--color-primary-lightblue));
+}
+
+.navigator-links {
+  margin: 0 auto;
+  padding: 3rem 0;
+  max-width: 70%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  font-size: 2rem;
+}
+
+.navigator-links .nav-link {
+  color: hsl(var(--color-white));
+  text-decoration: none;
+}
+
+.navigator-links li:first-of-type {
+  margin-right: auto;
+}
+
+/* Upper Header of Main */
+
+.main-upper-header {
+  padding: 2rem 0;
+  width: 100%;
+  align-items: center;
+  border-bottom: 0.2rem solid hsl(var(--color-dark));
+}
+
+.main-upper-header .location-heading {
+  font-size: 3rem;
+}
+
+.main-upper-header .adjust-metric {
+  font-size: 1.6rem;
+  margin-left: auto;
+}
+
+/* Week Display Section */
+
+.week-display {
+  gap: 2rem;
+}
+

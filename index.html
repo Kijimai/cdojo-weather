@@ -4,15 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Dojo Weather</title>
   </head>
   <body>
     <header>
-      <nav></nav>
+      <nav class="navigator">
+        <ul class="navigator-links flex">
+          <li>
+            <a class="nav-link" href="#"
+              ><h1 class="site-brand">DojoWeather</h1></a
+            >
+          </li>
+          <li><a class="nav-link" href="#">Burbank</a></li>
+          <li><a class="nav-link" href="#">Chicago</a></li>
+          <li><a class="nav-link" href="#">Dallas</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      
+      <div class="main-upper-header flex">
+        <h2 class="location-heading">San Jose</h2>
+        <div class="adjust-metric">
+          <span
+            >show temperature in
+            <select>
+              <option value="celsius">Celsius</option>
+              <option value="fahrenheit">Fahrenheit</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <section id="week-display" class="week-display flex">
+        <article class="day-container">
+          <h2>Today</h2>
+          <img src="./assets/some_sun.png" alt="sunny weather" />
+          <span>some rain</span>
+          <div class="temperature-container flex">
+            <span>24degree</span><span>16degree</span>
+          </div>
+        </article>
+        <article class="day-container">
+          <h2>Today</h2>
+          <img src="./assets/some_sun.png" alt="sunny weather" />
+          <span>some rain</span>
+          <div class="temperature-container flex">
+            <span>24degree</span><span>16degree</span>
+          </div>
+        </article>
+        <article class="day-container">
+          <h2>Today</h2>
+          <img src="./assets/some_sun.png" alt="sunny weather" />
+          <span>some rain</span>
+          <div class="temperature-container flex">
+            <span>24degree</span><span>16degree</span>
+          </div>
+        </article>
+        <article class="day-container">
+          <h2>Today</h2>
+          <img src="./assets/some_sun.png" alt="sunny weather" />
+          <span>some rain</span>
+          <div class="temperature-container flex">
+            <span>24degree</span><span>16degree</span>
+          </div>
+        </article>
+      </section>
+      <!-- <button class="btn light-blue">I accept</button> -->
     </main>
     <script src="./script.js" type="text/javascript"></script>
   </body>
