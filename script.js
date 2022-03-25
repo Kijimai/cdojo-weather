@@ -108,6 +108,9 @@ function displayCookie() {
 
 function hideCookie() {
   cookieContainer.classList.remove("active")
+  setTimeout(() => {
+    cookieContainer.remove()
+  }, 4000)
 }
 
 renderWeather()
