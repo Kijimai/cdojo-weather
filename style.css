@@ -7,6 +7,8 @@
   --color-primary-lightblue: 214 86% 80%;
 
   --default-font-size: 62.5%; /* 10px */
+
+  --box-shadow: 0 1rem 0.6rem 0.25rem hsl(var(--color-dark));
 }
 
 html {
@@ -23,6 +25,7 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
 }
@@ -39,6 +42,7 @@ main {
 }
 
 .btn {
+  white-space: nowrap;
   cursor: pointer;
   padding: 0.5rem 1rem;
   font-size: 1.8rem;
@@ -108,6 +112,75 @@ main {
 /* Week Display Section */
 
 .week-display {
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
   gap: 2rem;
 }
 
+.week-display .day-container {
+  flex: 1 0 18rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: lightgrey;
+  font-size: 1.8rem;
+  transition: 0.3s ease transform, 0.3s ease box-shadow;
+}
+
+.week-display .day-container:hover {
+  box-shadow: var(--box-shadow);
+  transform: translateY(-0.8rem);
+}
+
+.week-display .day-container .weather-img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.day-container .temperature-container {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.day-container .temperature-container .highs,
+.day-container .temperature-container .lows {
+  font-weight: 700;
+}
+
+.day-container .temperature-container .highs {
+  color: hsl(0, 88%, 60%);
+}
+
+.day-container .temperature-container .lows {
+  color: hsl(216, 88%, 60%);
+}
+
+/* Cookie Section */
+.cookie-container {
+  background-color: hsl(var(--color-white));
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: 0.2rem solid hsl(var(--color-dark));
+  gap: 1rem;
+  align-items: center;
+  max-width: 65rem;
+  min-width: 45rem;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  transition: 2s ease opacity;
+}
+
+.cookie-container.active {
+  user-select: initial;
+  pointer-events: initial;
+  opacity: 1;
+}
